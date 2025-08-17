@@ -18,26 +18,26 @@ import ContactPage from './pages/ContactPage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-// Create a modern theme with East Bench branding
+// Create a modern theme matching Veho's style
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#1976d2', // Professional blue
-      light: '#42a5f5',
-      dark: '#1565c0',
+      main: '#3B82F6', // Modern blue (Veho-style)
+      light: '#60A5FA',
+      dark: '#2563EB',
     },
     secondary: {
-      main: '#2e7d32', // Green for delivery/success
-      light: '#4caf50',
-      dark: '#1b5e20',
+      main: '#0F172A', // Dark blue/navy
+      light: '#1E293B',
+      dark: '#020617',
     },
     background: {
       default: '#ffffff',
-      paper: '#f8f9fa',
+      paper: '#F8FAFC',
     },
     text: {
-      primary: '#1a1a1a',
-      secondary: '#666666',
+      primary: '#0F172A',
+      secondary: '#64748B',
     },
   },
   typography: {

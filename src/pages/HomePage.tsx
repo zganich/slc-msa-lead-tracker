@@ -72,83 +72,446 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <Box
         sx={{
-          background: 'linear-gradient(135deg, #1976d2 0%, #42a5f5 100%)',
+          background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
           color: 'white',
-          py: 8,
+          py: 12,
           textAlign: 'center',
+          position: 'relative',
+          overflow: 'hidden',
         }}
       >
         <Container maxWidth="lg">
-          <Typography variant="h1" sx={{ mb: 3, fontWeight: 700 }}>
-            East Bench Delivery
+          <Typography 
+            variant="h1" 
+            sx={{ 
+              mb: 4, 
+              fontWeight: 700, 
+              fontSize: { xs: '2.5rem', md: '3.5rem' },
+              lineHeight: 1.1 
+            }}
+          >
+            Last-mile delivery is all about the{' '}
+            <Box component="span" sx={{ color: '#3B82F6' }}>
+              last foot
+            </Box>
           </Typography>
-          <Typography variant="h4" sx={{ mb: 4, fontWeight: 400 }}>
-            Professional Last-Mile Delivery for Salt Lake City MSA
+          <Typography 
+            variant="h5" 
+            sx={{ 
+              mb: 6, 
+              fontWeight: 400,
+              opacity: 0.9,
+              maxWidth: '600px',
+              mx: 'auto',
+              lineHeight: 1.5
+            }}
+          >
+            Over 99% on-time delivery for Salt Lake City MSA businesses at a simple and transparent cost.
           </Typography>
-          <Typography variant="h6" sx={{ mb: 6, opacity: 0.9 }}>
-            Serving contractors, hardware stores, and local businesses with reliable, 
-            same-day delivery across the East Bench and beyond.
-          </Typography>
-          <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap', mb: 6 }}>
             <Button
               variant="contained"
               size="large"
-              onClick={() => navigate('/pricing')}
+              onClick={() => navigate('/contact')}
               sx={{
-                backgroundColor: 'white',
-                color: 'primary.main',
+                backgroundColor: '#3B82F6',
+                color: 'white',
+                py: 2,
+                px: 4,
+                borderRadius: 3,
+                fontSize: '1.1rem',
+                fontWeight: 600,
                 '&:hover': {
-                  backgroundColor: '#f5f5f5',
+                  backgroundColor: '#2563EB',
                 },
               }}
             >
-              View Pricing
+              Chat with Sales
             </Button>
             <Button
               variant="outlined"
               size="large"
-              onClick={() => navigate('/contact')}
+              onClick={() => navigate('/pricing')}
               sx={{
                 borderColor: 'white',
                 color: 'white',
+                py: 2,
+                px: 4,
+                borderRadius: 3,
+                fontSize: '1.1rem',
+                fontWeight: 600,
                 '&:hover': {
                   borderColor: 'white',
                   backgroundColor: 'rgba(255,255,255,0.1)',
                 },
               }}
             >
-              Contact Us
+              View Pricing
             </Button>
+          </Box>
+          
+          {/* Trust indicators */}
+          <Box sx={{ mt: 8, opacity: 0.8 }}>
+            <Typography variant="body2" sx={{ mb: 3, fontWeight: 600 }}>
+              Trusted by East Bench businesses
+            </Typography>
+            <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
+              <Typography variant="body2" sx={{ opacity: 0.7 }}>Ace Hardware</Typography>
+              <Typography variant="body2" sx={{ opacity: 0.7 }}>Mountain West Supply</Typography>
+              <Typography variant="body2" sx={{ opacity: 0.7 }}>Cottonwood Contractors</Typography>
+              <Typography variant="body2" sx={{ opacity: 0.7 }}>Garden Centers Plus</Typography>
+            </Box>
           </Box>
         </Container>
       </Box>
 
-      {/* Features Section */}
-      <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Typography variant="h2" sx={{ textAlign: 'center', mb: 6, fontWeight: 600 }}>
-          Why Choose East Bench Delivery?
+      {/* Value Proposition Section */}
+      <Container maxWidth="lg" sx={{ py: 12 }}>
+        <Typography 
+          variant="h2" 
+          sx={{ 
+            textAlign: 'center', 
+            mb: 3, 
+            fontWeight: 700,
+            fontSize: { xs: '2rem', md: '2.5rem' }
+          }}
+        >
+          A better delivery experience for{' '}
+          <Box component="span" sx={{ color: '#3B82F6' }}>
+            businesses and their customers
+          </Box>
         </Typography>
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            textAlign: 'center', 
+            mb: 8, 
+            color: 'text.secondary',
+            maxWidth: '700px',
+            mx: 'auto',
+            lineHeight: 1.6
+          }}
+        >
+          Powered by best-in-class logistics, East Bench Delivery provides same-day and next-day delivery solutions, 
+          offering a premium customer experience at a simple, transparent cost.
+        </Typography>
+
+        {/* Key Metrics */}
+        <Box 
+          sx={{ 
+            display: "flex", 
+            flexWrap: "wrap", 
+            gap: 6, 
+            justifyContent: "center",
+            mb: 10,
+            textAlign: 'center'
+          }}
+        >
+          <Box>
+            <Typography variant="h2" sx={{ fontWeight: 700, color: '#3B82F6', mb: 1 }}>
+              99%
+            </Typography>
+            <Typography variant="body1" sx={{ fontWeight: 600 }}>
+              On-time delivery rate
+            </Typography>
+          </Box>
+          <Box>
+            <Typography variant="h2" sx={{ fontWeight: 700, color: '#3B82F6', mb: 1 }}>
+              4.9/5
+            </Typography>
+            <Typography variant="body1" sx={{ fontWeight: 600 }}>
+              Customer satisfaction score
+            </Typography>
+          </Box>
+          <Box>
+            <Typography variant="h2" sx={{ fontWeight: 700, color: '#3B82F6', mb: 1 }}>
+              2hr
+            </Typography>
+            <Typography variant="body1" sx={{ fontWeight: 600 }}>
+              Fastest delivery window
+            </Typography>
+          </Box>
+          <Box>
+            <Typography variant="h2" sx={{ fontWeight: 700, color: '#3B82F6', mb: 1 }}>
+              50+
+            </Typography>
+            <Typography variant="body1" sx={{ fontWeight: 600 }}>
+              Local businesses served
+            </Typography>
+          </Box>
+        </Box>
+
+        {/* Features List */}
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {features.map((feature, index) => (
-            <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }} key={index}>
-              <Card sx={{ height: '100%', textAlign: 'center' }}>
-                <CardContent>
-                  <Avatar
-                    sx={{
-                      width: 64,
-                      height: 64,
-                      mx: 'auto',
-                      mb: 2,
-                      bgcolor: 'primary.main',
+            <Box 
+              sx={{ 
+                width: { xs: "100%", md: "50%" },
+                display: 'flex',
+                alignItems: 'flex-start',
+                gap: 3
+              }} 
+              key={index}
+            >
+              <Box
+                sx={{
+                  width: 48,
+                  height: 48,
+                  borderRadius: '50%',
+                  backgroundColor: '#EFF6FF',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#3B82F6',
+                  flexShrink: 0
+                }}
+              >
+                {feature.icon}
+              </Box>
+              <Box>
+                <Typography variant="h6" sx={{ mb: 1, fontWeight: 600 }}>
+                  {feature.title}
+                </Typography>
+                <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                  {feature.description}
+                </Typography>
+              </Box>
+            </Box>
+          ))}
+        </Box>
+
+        <Box sx={{ textAlign: 'center', mt: 8 }}>
+          <Button
+            variant="contained"
+            size="large"
+            onClick={() => navigate('/contact')}
+            sx={{
+              backgroundColor: '#3B82F6',
+              color: 'white',
+              py: 2,
+              px: 4,
+              borderRadius: 3,
+              fontSize: '1.1rem',
+              fontWeight: 600,
+              '&:hover': {
+                backgroundColor: '#2563EB',
+              },
+            }}
+          >
+            Get Started
+          </Button>
+        </Box>
+      </Container>
+
+      {/* How It Works Section */}
+      <Box sx={{ backgroundColor: '#F8FAFC', py: 12 }}>
+        <Container maxWidth="lg">
+          <Typography 
+            variant="h2" 
+            sx={{ 
+              textAlign: 'center', 
+              mb: 3, 
+              fontWeight: 700,
+              fontSize: { xs: '2rem', md: '2.5rem' }
+            }}
+          >
+            How it works
+          </Typography>
+          <Typography 
+            variant="h6" 
+            sx={{ 
+              textAlign: 'center', 
+              mb: 10, 
+              color: 'text.secondary',
+              maxWidth: '600px',
+              mx: 'auto'
+            }}
+          >
+            Simple, efficient delivery process designed for East Bench businesses
+          </Typography>
+
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+              <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 3, mb: 4 }}>
+                <Box
+                  sx={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: '50%',
+                    backgroundColor: '#3B82F6',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontWeight: 700,
+                    fontSize: '1.25rem',
+                    flexShrink: 0
+                  }}
+                >
+                  01
+                </Box>
+                <Box>
+                  <Typography variant="h6" sx={{ mb: 1, fontWeight: 600 }}>
+                    Business places order
+                  </Typography>
+                  <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                    Schedule delivery through our simple booking system or call our local team.
+                  </Typography>
+                </Box>
+              </Box>
+              
+              <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 3, mb: 4 }}>
+                <Box
+                  sx={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: '50%',
+                    backgroundColor: '#3B82F6',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontWeight: 700,
+                    fontSize: '1.25rem',
+                    flexShrink: 0
+                  }}
+                >
+                  02
+                </Box>
+                <Box>
+                  <Typography variant="h6" sx={{ mb: 1, fontWeight: 600 }}>
+                    Pickup & route optimization
+                  </Typography>
+                  <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                    We collect items and optimize routes for the fastest, most efficient delivery.
+                  </Typography>
+                </Box>
+              </Box>
+            </Box>
+
+            <Box sx={{ width: { xs: "100%", md: "50%" } }}>
+              <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 3, mb: 4 }}>
+                <Box
+                  sx={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: '50%',
+                    backgroundColor: '#3B82F6',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontWeight: 700,
+                    fontSize: '1.25rem',
+                    flexShrink: 0
+                  }}
+                >
+                  03
+                </Box>
+                <Box>
+                  <Typography variant="h6" sx={{ mb: 1, fontWeight: 600 }}>
+                    Real-time tracking
+                  </Typography>
+                  <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                    Customers receive updates and delivery windows with live package tracking.
+                  </Typography>
+                </Box>
+              </Box>
+              
+              <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 3, mb: 4 }}>
+                <Box
+                  sx={{
+                    width: 48,
+                    height: 48,
+                    borderRadius: '50%',
+                    backgroundColor: '#3B82F6',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'white',
+                    fontWeight: 700,
+                    fontSize: '1.25rem',
+                    flexShrink: 0
+                  }}
+                >
+                  04
+                </Box>
+                <Box>
+                  <Typography variant="h6" sx={{ mb: 1, fontWeight: 600 }}>
+                    Delivery & confirmation
+                  </Typography>
+                  <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
+                    Professional delivery with photo proof and customer satisfaction rating.
+                  </Typography>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
+      {/* Customer Types Section */}
+      <Container maxWidth="lg" sx={{ py: 12 }}>
+        <Typography 
+          variant="h2" 
+          sx={{ 
+            textAlign: 'center', 
+            mb: 3, 
+            fontWeight: 700,
+            fontSize: { xs: '2rem', md: '2.5rem' }
+          }}
+        >
+          Solutions for every East Bench business
+        </Typography>
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            textAlign: 'center', 
+            mb: 8, 
+            color: 'text.secondary',
+            maxWidth: '600px',
+            mx: 'auto'
+          }}
+        >
+          Specialized delivery services for contractors, hardware stores, and local businesses
+        </Typography>
+
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
+          {customerTypes.map((customer, index) => (
+            <Box sx={{ width: { xs: "100%", md: "50%", lg: "25%" } }} key={index}>
+              <Card 
+                sx={{ 
+                  height: '100%', 
+                  cursor: 'pointer',
+                  transition: 'all 0.2s',
+                  border: '1px solid',
+                  borderColor: 'divider',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
+                    borderColor: '#3B82F6',
+                  },
+                }}
+                onClick={() => navigate(customer.path)}
+              >
+                <CardContent sx={{ p: 4 }}>
+                  <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: '#3B82F6' }}>
+                    {customer.title}
+                  </Typography>
+                  <Typography variant="body1" color="text.secondary" sx={{ mb: 3, lineHeight: 1.6 }}>
+                    {customer.description}
+                  </Typography>
+                  <Typography 
+                    variant="body2" 
+                    sx={{ 
+                      fontWeight: 600, 
+                      color: '#3B82F6',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 1
                     }}
                   >
-                    {feature.icon}
-                  </Avatar>
-                  <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
-                    {feature.title}
-                  </Typography>
-                  <Typography variant="body1" color="text.secondary">
-                    {feature.description}
+                    Learn More →
                   </Typography>
                 </CardContent>
               </Card>
@@ -157,90 +520,73 @@ const HomePage: React.FC = () => {
         </Box>
       </Container>
 
-      {/* Customer Types Section */}
-      <Box sx={{ backgroundColor: 'background.paper', py: 8 }}>
-        <Container maxWidth="lg">
-          <Typography variant="h2" sx={{ textAlign: 'center', mb: 6, fontWeight: 600 }}>
-            Solutions for Every Business
-          </Typography>
-          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
-            {customerTypes.map((customer, index) => (
-              <Box sx={{ width: { xs: "100%", md: "50%" } }} key={index}>
-                <Card 
-                  sx={{ 
-                    height: '100%', 
-                    cursor: 'pointer',
-                    transition: 'transform 0.2s',
-                    '&:hover': {
-                      transform: 'translateY(-4px)',
-                    },
-                  }}
-                  onClick={() => navigate(customer.path)}
-                >
-                  <CardMedia
-                    component="div"
-                    sx={{
-                      height: 200,
-                      backgroundColor: 'grey.200',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <Typography variant="h4" color="text.secondary">
-                      {customer.title}
-                    </Typography>
-                  </CardMedia>
-                  <CardContent>
-                    <Typography variant="h5" sx={{ mb: 2, fontWeight: 600 }}>
-                      {customer.title}
-                    </Typography>
-                    <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-                      {customer.description}
-                    </Typography>
-                    <Button
-                      variant="outlined"
-                      onClick={() => navigate(customer.path)}
-                    >
-                      Learn More
-                    </Button>
-                  </CardContent>
-                </Card>
-              </Box>
-            ))}
-          </Box>
-        </Container>
-      </Box>
-
       {/* CTA Section */}
       <Box
         sx={{
-          background: 'linear-gradient(135deg, #2e7d32 0%, #4caf50 100%)',
+          background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)',
           color: 'white',
-          py: 8,
+          py: 12,
           textAlign: 'center',
         }}
       >
         <Container maxWidth="md">
-          <Typography variant="h3" sx={{ mb: 3, fontWeight: 600 }}>
-            Ready to Get Started?
+          <Typography 
+            variant="h2" 
+            sx={{ 
+              mb: 4, 
+              fontWeight: 700,
+              fontSize: { xs: '2rem', md: '2.5rem' }
+            }}
+          >
+            Ready to elevate your delivery experience?
           </Typography>
-          <Typography variant="h6" sx={{ mb: 4, opacity: 0.9 }}>
-            Join dozens of East Bench businesses already using our reliable delivery service.
+          <Typography 
+            variant="h6" 
+            sx={{ 
+              mb: 6, 
+              opacity: 0.9,
+              lineHeight: 1.6,
+              maxWidth: '500px',
+              mx: 'auto'
+            }}
+          >
+            Join East Bench businesses already saving time and money with our professional delivery service.
           </Typography>
+          
+          {/* Key benefits */}
+          <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap', mb: 6 }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <CheckCircle sx={{ fontSize: 20, color: '#3B82F6' }} />
+              <Typography variant="body2">99% on-time delivery</Typography>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <CheckCircle sx={{ fontSize: 20, color: '#3B82F6' }} />
+              <Typography variant="body2">Transparent pricing</Typography>
+            </Box>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <CheckCircle sx={{ fontSize: 20, color: '#3B82F6' }} />
+              <Typography variant="body2">Local expertise</Typography>
+            </Box>
+          </Box>
+
           <Button
             variant="contained"
             size="large"
-            onClick={() => navigate('/pricing')}
+            onClick={() => navigate('/contact')}
             sx={{
-              backgroundColor: 'white',
-              color: 'secondary.main',
+              backgroundColor: '#3B82F6',
+              color: 'white',
+              py: 2,
+              px: 4,
+              borderRadius: 3,
+              fontSize: '1.1rem',
+              fontWeight: 600,
               '&:hover': {
-                backgroundColor: '#f5f5f5',
+                backgroundColor: '#2563EB',
               },
             }}
           >
-            View Pricing & Packages
+            Get Started Today
           </Button>
         </Container>
       </Box>
