@@ -197,7 +197,7 @@ const ContractorPage: React.FC = () => {
         <Typography variant="h2" sx={{ textAlign: 'center', mb: 6, fontWeight: 600 }}>
           Contractor Pack - Most Popular
         </Typography>
-        <Box container spacing={4} alignItems="center">
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4, alignItems: "center" }}>
           <Box sx={{ width: { xs: "100%", md: "50%" } }}>
             <Card sx={{ p: 4 }}>
               <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main', mb: 2 }}>

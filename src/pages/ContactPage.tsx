@@ -111,7 +111,7 @@ const ContactPage: React.FC = () => {
       </Box>
 
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Box container spacing={6}>
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
           {/* Contact Form */}
           <Box sx={{ width: { xs: "100%", md: "50%" } }}>
             <Card>

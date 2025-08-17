@@ -179,7 +179,7 @@ const LeadList: React.FC = () => {
       {/* Filters */}
       <Card sx={{ mb: 3 }}>
         <CardContent>
-          <Box container spacing={2} alignItems="center">
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2, alignItems: "center" }}>
             <Box sx={{ width: { xs: "100%", md: "50%" } }}>
               <TextField
                 fullWidth

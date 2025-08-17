@@ -150,7 +150,7 @@ const PricingPage: React.FC = () => {
           Pricing based on delivery distance from our East Bench hub
         </Typography>
 
-        <Box container spacing={3} sx={{ mb: 6 }}>
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3, mb: 6 }}>
           {zones.map((zone) => (
             <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }} key={zone.zone}>
               <Card
@@ -224,7 +224,7 @@ const PricingPage: React.FC = () => {
         <Typography variant="h3" sx={{ textAlign: 'center', mb: 4, fontWeight: 600 }}>
           Item Size Adjustments
         </Typography>
-        <Box container spacing={3} sx={{ mb: 8 }}>
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3, mb: 8 }}>
           {itemSizes.map((item) => (
             <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }} key={item.size}>
               <Card>
@@ -256,7 +256,7 @@ const PricingPage: React.FC = () => {
 
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {packages.map((pkg) => (
-            <Box sx={{ width: { xs: "100%", md: "50%" } }} lg={3} key={pkg.name}>
+            <Box sx={{ width: { xs: "100%", md: "50%", lg: "25%" } }} key={pkg.name}>
               <Card
                 sx={{
                   height: '100%',

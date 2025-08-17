@@ -109,7 +109,7 @@ const Dashboard: React.FC = () => {
       </Typography>
       
       {/* Stats Cards */}
-      <Box container spacing={3} sx={{ mb: 4 }}>
+      <Box  sx={{ display: "flex", flexWrap: "wrap", gap: 3, mb: 4 }}>
         <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }}>
           <StatCard
             title="Total Leads"
@@ -149,7 +149,7 @@ const Dashboard: React.FC = () => {
       </Box>
 
       {/* Charts Row */}
-      <Box container spacing={3} sx={{ mb: 4 }}>
+      <Box  sx={{ display: "flex", flexWrap: "wrap", gap: 3, mb: 4 }}>
         <Box sx={{ width: { xs: "100%", md: "50%" } }}>
           <Card>
             <CardContent>
@@ -163,7 +163,7 @@ const Dashboard: React.FC = () => {
                     cx="50%"
                     cy="50%"
                     labelLine={false}
-                    label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                    label={({ name, percent }: { name: string; percent?: number }) => `${name} ${((percent || 0) * 100).toFixed(0)}%`}
                     outerRadius={80}
                     fill="#8884d8"
                     dataKey="value"
