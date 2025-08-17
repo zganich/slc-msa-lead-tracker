@@ -18,17 +18,6 @@ import { useNavigate } from 'react-router-dom';
 const HomePage: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleNavigation = (path: string) => {
-    // Special handling for quote requests
-    if (path === '/quote') {
-      navigate('/quote');
-    } else if (['/contact', '/pricing', '/contractors', '/hardware-stores', '/garden-centers'].includes(path)) {
-      alert(`Coming soon: ${path} page is under development!`);
-    } else {
-      navigate(path);
-    }
-  };
-
   const features = [
     {
       icon: <Speed />,
@@ -56,19 +45,19 @@ const HomePage: React.FC = () => {
     {
       title: 'Contractors',
       description: 'Hardware, tools, and supplies delivered to job sites',
-      icon: <Speed />,
+      image: '/contractor.jpg',
       path: '/contractors',
     },
     {
       title: 'Hardware Stores',
       description: 'Expand your reach with local delivery service',
-      icon: <LocationOn />,
+      image: '/hardware.jpg',
       path: '/hardware-stores',
     },
     {
       title: 'Garden Centers',
       description: 'Plants, soil, and garden supplies delivered safely',
-      icon: <Savings />,
+      image: '/garden.jpg',
       path: '/garden-centers',
     },
   ];
@@ -118,7 +107,7 @@ const HomePage: React.FC = () => {
             <Button
               variant="contained"
               size="large"
-              onClick={() => handleNavigation('/quote')}
+              onClick={() => navigate('/contact')}
               sx={{
                 backgroundColor: '#3B82F6',
                 color: 'white',
@@ -132,12 +121,12 @@ const HomePage: React.FC = () => {
                 },
               }}
             >
-              Get Quote
+              Chat with Sales
             </Button>
             <Button
               variant="outlined"
               size="large"
-              onClick={() => handleNavigation('/pricing')}
+              onClick={() => navigate('/pricing')}
               sx={{
                 borderColor: 'white',
                 color: 'white',
@@ -205,9 +194,10 @@ const HomePage: React.FC = () => {
         {/* Key Metrics */}
         <Box 
           sx={{ 
-            display: "grid", 
-            gridTemplateColumns: { xs: "repeat(2, 1fr)", md: "repeat(4, 1fr)" },
-            gap: { xs: 4, md: 6 }, 
+            display: "flex", 
+            flexWrap: "wrap", 
+            gap: 6, 
+            justifyContent: "center",
             mb: 10,
             textAlign: 'center'
           }}
@@ -247,10 +237,11 @@ const HomePage: React.FC = () => {
         </Box>
 
         {/* Features List */}
-        <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" }, gap: 4 }}>
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {features.map((feature, index) => (
             <Box 
               sx={{ 
+                width: { xs: "100%", md: "50%" },
                 display: 'flex',
                 alignItems: 'flex-start',
                 gap: 3
@@ -288,7 +279,7 @@ const HomePage: React.FC = () => {
           <Button
             variant="contained"
             size="large"
-            onClick={() => handleNavigation('/quote')}
+            onClick={() => navigate('/contact')}
             sx={{
               backgroundColor: '#3B82F6',
               color: 'white',
@@ -302,7 +293,7 @@ const HomePage: React.FC = () => {
               },
             }}
           >
-            Get Quote
+            Get Started
           </Button>
         </Box>
       </Container>
@@ -334,8 +325,8 @@ const HomePage: React.FC = () => {
             Simple, efficient delivery process designed for Salt Lake City MSA businesses
           </Typography>
 
-          <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "repeat(2, 1fr)" }, gap: 6 }}>
-            <Box>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            <Box sx={{ width: { xs: "100%", md: "50%" } }}>
               <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 3, mb: 4 }}>
                 <Box
                   sx={{
@@ -393,7 +384,7 @@ const HomePage: React.FC = () => {
               </Box>
             </Box>
 
-            <Box>
+            <Box sx={{ width: { xs: "100%", md: "50%" } }}>
               <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 3, mb: 4 }}>
                 <Box
                   sx={{
@@ -480,9 +471,9 @@ const HomePage: React.FC = () => {
           Specialized delivery services for contractors, hardware stores, and businesses across the Salt Lake Valley
         </Typography>
 
-        <Box sx={{ display: "grid", gridTemplateColumns: { xs: "1fr", md: "repeat(3, 1fr)" }, gap: 4 }}>
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {customerTypes.map((customer, index) => (
-            <Box key={index}>
+            <Box sx={{ width: { xs: "100%", md: "50%", lg: "25%" } }} key={index}>
               <Card 
                 sx={{ 
                   height: '100%', 
@@ -496,25 +487,9 @@ const HomePage: React.FC = () => {
                     borderColor: '#3B82F6',
                   },
                 }}
-                onClick={() => handleNavigation(customer.path)}
+                onClick={() => navigate(customer.path)}
               >
-                <CardContent sx={{ p: 4, textAlign: 'center' }}>
-                  <Box
-                    sx={{
-                      width: 64,
-                      height: 64,
-                      borderRadius: '50%',
-                      backgroundColor: '#EFF6FF',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: '#3B82F6',
-                      mx: 'auto',
-                      mb: 3
-                    }}
-                  >
-                    {customer.icon}
-                  </Box>
+                <CardContent sx={{ p: 4 }}>
                   <Typography variant="h5" sx={{ mb: 2, fontWeight: 600, color: '#3B82F6' }}>
                     {customer.title}
                   </Typography>
@@ -528,7 +503,6 @@ const HomePage: React.FC = () => {
                       color: '#3B82F6',
                       display: 'flex',
                       alignItems: 'center',
-                      justifyContent: 'center',
                       gap: 1
                     }}
                   >
@@ -593,7 +567,7 @@ const HomePage: React.FC = () => {
           <Button
             variant="contained"
             size="large"
-            onClick={() => handleNavigation('/quote')}
+            onClick={() => navigate('/contact')}
             sx={{
               backgroundColor: '#3B82F6',
               color: 'white',
@@ -607,7 +581,7 @@ const HomePage: React.FC = () => {
               },
             }}
           >
-            Get Quote Today
+            Get Started Today
           </Button>
         </Container>
       </Box>

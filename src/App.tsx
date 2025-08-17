@@ -15,6 +15,7 @@ import ContractorPage from './pages/ContractorPage';
 import HardwareStorePage from './pages/HardwareStorePage';
 import GardenCenterPage from './pages/GardenCenterPage';
 import ContactPage from './pages/ContactPage';
+import QuotePage from './pages/QuotePage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -107,7 +108,8 @@ function App() {
                          window.location.pathname === '/contractors' ||
                          window.location.pathname === '/hardware-stores' ||
                          window.location.pathname === '/garden-centers' ||
-                         window.location.pathname === '/contact';
+                         window.location.pathname === '/contact' ||
+                         window.location.pathname === '/quote';
 
   return (
     <ThemeProvider theme={theme}>
@@ -125,6 +127,7 @@ function App() {
                 <Route path="/hardware-stores" element={<HardwareStorePage />} />
                 <Route path="/garden-centers" element={<GardenCenterPage />} />
                 <Route path="/contact" element={<ContactPage />} />
+                <Route path="/quote" element={<QuotePage />} />
               </Routes>
             </Box>
             <Footer />

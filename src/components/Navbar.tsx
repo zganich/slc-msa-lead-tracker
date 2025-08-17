@@ -26,8 +26,13 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const handleNavigation = (path: string) => {
+    navigate(path);
+  };
+
   const menuItems = [
     { text: 'Home', path: '/' },
+    { text: 'Get Quote', path: '/quote' },
     { text: 'Pricing', path: '/pricing' },
     { text: 'Contractors', path: '/contractors' },
     { text: 'Hardware Stores', path: '/hardware-stores' },
@@ -48,7 +53,7 @@ const Navbar: React.FC = () => {
       </Typography>
       <List>
         {menuItems.map((item) => (
-          <ListItem key={item.text} onClick={() => navigate(item.path)}>
+          <ListItem key={item.text} onClick={() => handleNavigation(item.path)}>
             <ListItemText 
               primary={item.text}
               sx={{
@@ -85,7 +90,7 @@ const Navbar: React.FC = () => {
                 color: 'primary.main',
                 cursor: 'pointer',
               }}
-              onClick={() => navigate('/')}
+              onClick={() => handleNavigation('/')}
             >
               East Bench Delivery
             </Typography>
@@ -106,7 +111,7 @@ const Navbar: React.FC = () => {
                 <Button
                   key={item.text}
                   color="inherit"
-                  onClick={() => navigate(item.path)}
+                  onClick={() => handleNavigation(item.path)}
                   sx={{
                     color: isActive(item.path) ? 'primary.main' : 'text.primary',
                     fontWeight: isActive(item.path) ? 600 : 400,
@@ -121,10 +126,10 @@ const Navbar: React.FC = () => {
               <Button
                 variant="contained"
                 color="primary"
-                onClick={() => navigate('/pricing')}
+                onClick={() => handleNavigation('/quote')}
                 sx={{ ml: 2 }}
               >
-                Get Started
+                Get Quote
               </Button>
             </Box>
           )}

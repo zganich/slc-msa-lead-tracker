@@ -18,15 +18,13 @@ import {
   Phone,
   Email,
   LocationOn,
-  LocalShipping,
-  Business,
-  Person,
+
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 const ContactPage: React.FC = () => {
-  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',

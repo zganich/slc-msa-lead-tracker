@@ -4,7 +4,6 @@ import {
   Container,
   Typography,
   Link,
-  IconButton,
 } from '@mui/material';
 import {
   LocalShipping,
@@ -12,8 +11,15 @@ import {
   Email,
   LocationOn,
 } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 const Footer: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <Box
       sx={{
@@ -46,22 +52,22 @@ const Footer: React.FC = () => {
               Quick Links
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-              <Link href="/" color="inherit" sx={{ opacity: 0.8, '&:hover': { opacity: 1 } }}>
+              <Link onClick={() => handleNavigation('/')} sx={{ opacity: 0.8, '&:hover': { opacity: 1 }, cursor: 'pointer' }}>
                 Home
               </Link>
-              <Link href="/pricing" color="inherit" sx={{ opacity: 0.8, '&:hover': { opacity: 1 } }}>
+              <Link onClick={() => handleNavigation('/pricing')} sx={{ opacity: 0.8, '&:hover': { opacity: 1 }, cursor: 'pointer' }}>
                 Pricing
               </Link>
-              <Link href="/contractors" color="inherit" sx={{ opacity: 0.8, '&:hover': { opacity: 1 } }}>
+              <Link onClick={() => handleNavigation('/contractors')} sx={{ opacity: 0.8, '&:hover': { opacity: 1 }, cursor: 'pointer' }}>
                 Contractors
               </Link>
-              <Link href="/hardware-stores" color="inherit" sx={{ opacity: 0.8, '&:hover': { opacity: 1 } }}>
+              <Link onClick={() => handleNavigation('/hardware-stores')} sx={{ opacity: 0.8, '&:hover': { opacity: 1 }, cursor: 'pointer' }}>
                 Hardware Stores
               </Link>
-              <Link href="/garden-centers" color="inherit" sx={{ opacity: 0.8, '&:hover': { opacity: 1 } }}>
+              <Link onClick={() => handleNavigation('/garden-centers')} sx={{ opacity: 0.8, '&:hover': { opacity: 1 }, cursor: 'pointer' }}>
                 Garden Centers
               </Link>
-              <Link href="/contact" color="inherit" sx={{ opacity: 0.8, '&:hover': { opacity: 1 } }}>
+              <Link onClick={() => handleNavigation('/contact')} sx={{ opacity: 0.8, '&:hover': { opacity: 1 }, cursor: 'pointer' }}>
                 Contact
               </Link>
             </Box>
