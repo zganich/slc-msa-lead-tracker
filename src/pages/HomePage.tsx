@@ -36,8 +36,8 @@ const HomePage: React.FC = () => {
     },
     {
       icon: <LocationOn />,
-      title: 'East Bench Focus',
-      description: 'Local expertise in Sugar House, Cottonwood Heights, Holladay, and surrounding areas.',
+      title: 'Salt Lake Valley Coverage',
+      description: 'Complete MSA coverage from Salt Lake City to Provo, Park City to West Valley.',
     },
     {
       icon: <CheckCircle />,
@@ -106,7 +106,7 @@ const HomePage: React.FC = () => {
               lineHeight: 1.5
             }}
           >
-            Over 99% on-time delivery for Salt Lake City MSA businesses at a simple and transparent cost.
+            Over 99% on-time delivery across the Salt Lake City Metropolitan Area at a simple and transparent cost.
           </Typography>
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap', mb: 6 }}>
             <Button
@@ -153,13 +153,13 @@ const HomePage: React.FC = () => {
           {/* Trust indicators */}
           <Box sx={{ mt: 8, opacity: 0.8 }}>
             <Typography variant="body2" sx={{ mb: 3, fontWeight: 600 }}>
-              Trusted by East Bench businesses
+              Trusted by Salt Lake City MSA businesses
             </Typography>
             <Box sx={{ display: 'flex', gap: 4, justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center' }}>
-              <Typography variant="body2" sx={{ opacity: 0.7 }}>Ace Hardware</Typography>
-              <Typography variant="body2" sx={{ opacity: 0.7 }}>Mountain West Supply</Typography>
-              <Typography variant="body2" sx={{ opacity: 0.7 }}>Cottonwood Contractors</Typography>
-              <Typography variant="body2" sx={{ opacity: 0.7 }}>Garden Centers Plus</Typography>
+              <Typography variant="body2" sx={{ opacity: 0.7 }}>Salt Lake Hardware</Typography>
+              <Typography variant="body2" sx={{ opacity: 0.7 }}>Wasatch Supply Co</Typography>
+              <Typography variant="body2" sx={{ opacity: 0.7 }}>Valley Contractors</Typography>
+              <Typography variant="body2" sx={{ opacity: 0.7 }}>Utah Garden Centers</Typography>
             </Box>
           </Box>
         </Container>
@@ -192,7 +192,7 @@ const HomePage: React.FC = () => {
             lineHeight: 1.6
           }}
         >
-          Powered by best-in-class logistics, East Bench Delivery provides same-day and next-day delivery solutions, 
+          Powered by best-in-class logistics, we provide same-day and next-day delivery solutions across the Salt Lake City MSA, 
           offering a premium customer experience at a simple, transparent cost.
         </Typography>
 
@@ -327,7 +327,7 @@ const HomePage: React.FC = () => {
               mx: 'auto'
             }}
           >
-            Simple, efficient delivery process designed for East Bench businesses
+            Simple, efficient delivery process designed for Salt Lake City MSA businesses
           </Typography>
 
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
@@ -355,7 +355,7 @@ const HomePage: React.FC = () => {
                     Business places order
                   </Typography>
                   <Typography variant="body1" color="text.secondary" sx={{ lineHeight: 1.6 }}>
-                    Schedule delivery through our simple booking system or call our local team.
+                    Schedule delivery through our simple booking system or call our Salt Lake City team.
                   </Typography>
                 </Box>
               </Box>
@@ -461,7 +461,7 @@ const HomePage: React.FC = () => {
             fontSize: { xs: '2rem', md: '2.5rem' }
           }}
         >
-          Solutions for every East Bench business
+          Solutions for every Salt Lake City MSA business
         </Typography>
         <Typography 
           variant="h6" 
@@ -473,7 +473,7 @@ const HomePage: React.FC = () => {
             mx: 'auto'
           }}
         >
-          Specialized delivery services for contractors, hardware stores, and local businesses
+          Specialized delivery services for contractors, hardware stores, and businesses across the Salt Lake Valley
         </Typography>
 
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
@@ -550,7 +550,7 @@ const HomePage: React.FC = () => {
               mx: 'auto'
             }}
           >
-            Join East Bench businesses already saving time and money with our professional delivery service.
+            Join Salt Lake City MSA businesses already saving time and money with our professional delivery service.
           </Typography>
           
           {/* Key benefits */}
@@ -565,7 +565,7 @@ const HomePage: React.FC = () => {
             </Box>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
               <CheckCircle sx={{ fontSize: 20, color: '#3B82F6' }} />
-              <Typography variant="body2">Local expertise</Typography>
+              <Typography variant="body2">Salt Lake Valley expertise</Typography>
             </Box>
           </Box>
 
