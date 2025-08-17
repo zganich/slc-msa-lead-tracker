@@ -9,6 +9,14 @@ import AddLead from './components/AddLead';
 import LeadDetail from './components/LeadDetail';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
+import HomePage from './pages/HomePage';
+import PricingPage from './pages/PricingPage';
+import ContractorPage from './pages/ContractorPage';
+import HardwareStorePage from './pages/HardwareStorePage';
+import GardenCenterPage from './pages/GardenCenterPage';
+import ContactPage from './pages/ContactPage';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 // Create a modern theme with East Bench branding
 const theme = createTheme({
@@ -19,13 +27,13 @@ const theme = createTheme({
       dark: '#1565c0',
     },
     secondary: {
-      main: '#dc004e', // Accent color
-      light: '#ff5983',
-      dark: '#9a0036',
+      main: '#2e7d32', // Green for delivery/success
+      light: '#4caf50',
+      dark: '#1b5e20',
     },
     background: {
-      default: '#f5f5f5',
-      paper: '#ffffff',
+      default: '#ffffff',
+      paper: '#f8f9fa',
     },
     text: {
       primary: '#1a1a1a',
@@ -36,27 +44,33 @@ const theme = createTheme({
     fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
       fontWeight: 700,
-      fontSize: '2.5rem',
+      fontSize: '3rem',
+      lineHeight: 1.2,
     },
     h2: {
       fontWeight: 600,
-      fontSize: '2rem',
+      fontSize: '2.5rem',
+      lineHeight: 1.3,
     },
     h3: {
       fontWeight: 600,
-      fontSize: '1.5rem',
+      fontSize: '2rem',
+      lineHeight: 1.4,
     },
     h4: {
       fontWeight: 500,
-      fontSize: '1.25rem',
+      fontSize: '1.5rem',
+      lineHeight: 1.4,
     },
     h5: {
       fontWeight: 500,
-      fontSize: '1.125rem',
+      fontSize: '1.25rem',
+      lineHeight: 1.4,
     },
     h6: {
       fontWeight: 500,
       fontSize: '1rem',
+      lineHeight: 1.4,
     },
   },
   shape: {
@@ -69,21 +83,15 @@ const theme = createTheme({
           textTransform: 'none',
           borderRadius: 8,
           fontWeight: 500,
+          padding: '12px 24px',
         },
       },
     },
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: 12,
-          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-        },
-      },
-    },
-    MuiPaper: {
-      styleOverrides: {
-        root: {
-          borderRadius: 12,
+          borderRadius: 16,
+          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
         },
       },
     },
@@ -93,24 +101,51 @@ const theme = createTheme({
 function App() {
   const [sidebarOpen, setSidebarOpen] = React.useState(true);
 
+  // Check if we're on a marketing page
+  const isMarketingPage = window.location.pathname === '/' || 
+                         window.location.pathname === '/pricing' ||
+                         window.location.pathname === '/contractors' ||
+                         window.location.pathname === '/hardware-stores' ||
+                         window.location.pathname === '/garden-centers' ||
+                         window.location.pathname === '/contact';
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Router>
-        <Box sx={{ display: 'flex', minHeight: '100vh' }}>
-          <Sidebar open={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
-          <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
-            <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
-            <Box component="main" sx={{ flexGrow: 1, p: 3, backgroundColor: 'background.default' }}>
+        {isMarketingPage ? (
+          // Marketing layout
+          <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <Navbar />
+            <Box component="main" sx={{ flex: 1 }}>
               <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/leads" element={<LeadList />} />
-                <Route path="/leads/add" element={<AddLead />} />
-                <Route path="/leads/:id" element={<LeadDetail />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/pricing" element={<PricingPage />} />
+                <Route path="/contractors" element={<ContractorPage />} />
+                <Route path="/hardware-stores" element={<HardwareStorePage />} />
+                <Route path="/garden-centers" element={<GardenCenterPage />} />
+                <Route path="/contact" element={<ContactPage />} />
               </Routes>
             </Box>
+            <Footer />
           </Box>
-        </Box>
+        ) : (
+          // Admin layout
+          <Box sx={{ display: 'flex', minHeight: '100vh' }}>
+            <Sidebar open={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
+            <Box sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+              <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
+              <Box component="main" sx={{ flexGrow: 1, p: 3, backgroundColor: 'background.default' }}>
+                <Routes>
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/leads" element={<LeadList />} />
+                  <Route path="/leads/add" element={<AddLead />} />
+                  <Route path="/leads/:id" element={<LeadDetail />} />
+                </Routes>
+              </Box>
+            </Box>
+          </Box>
+        )}
       </Router>
       <Toaster
         position="top-right"
