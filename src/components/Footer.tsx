@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
     >
       <Container maxWidth="lg">
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
-          <Grid item xs={12} md={4}>
+          <Box item xs={12} md={4}>
             <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
               <LocalShipping sx={{ mr: 1, color: 'primary.main' }} />
               <Typography variant="h6" sx={{ fontWeight: 700, color: 'primary.main' }}>
@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
             </Typography>
           </Box>
           
-          <Grid item xs={12} md={4}>
+          <Box item xs={12} md={4}>
             <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>
               Quick Links
             </Typography>
@@ -67,7 +67,7 @@ const Footer: React.FC = () => {
             </Box>
           </Box>
           
-          <Grid item xs={12} md={4}>
+          <Box item xs={12} md={4}>
             <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>
               Contact Information
             </Typography>

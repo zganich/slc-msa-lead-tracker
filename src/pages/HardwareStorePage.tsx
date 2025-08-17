@@ -124,7 +124,7 @@ const HardwareStorePage: React.FC = () => {
         </Typography>
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {benefits.map((benefit, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
+            <Box item xs={12} sm={6} md={3} key={index}>
               <Card sx={{ height: '100%', textAlign: 'center' }}>
                 <CardContent>
                   <Box
@@ -167,7 +167,7 @@ const HardwareStorePage: React.FC = () => {
           </Typography>
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
             {services.map((service, index) => (
-              <Grid item xs={12} sm={6} md={4} key={index}>
+              <Box item xs={12} sm={6} md={4} key={index}>
                 <Box sx={{ display: 'flex', alignItems: 'center', p: 2 }}>
                   <CheckCircle sx={{ color: 'success.main', mr: 2 }} />
                   <Typography variant="body1">{service}</Typography>
@@ -184,7 +184,7 @@ const HardwareStorePage: React.FC = () => {
           Simple Partnership Process
         </Typography>
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
-          <Grid item xs={12} md={4}>
+          <Box item xs={12} md={4}>
             <Card sx={{ height: '100%', textAlign: 'center' }}>
               <CardContent>
                 <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main', mb: 2 }}>
@@ -199,7 +199,7 @@ const HardwareStorePage: React.FC = () => {
               </CardContent>
             </Card>
           </Box>
-          <Grid item xs={12} md={4}>
+          <Box item xs={12} md={4}>
             <Card sx={{ height: '100%', textAlign: 'center' }}>
               <CardContent>
                 <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main', mb: 2 }}>
@@ -214,7 +214,7 @@ const HardwareStorePage: React.FC = () => {
               </CardContent>
             </Card>
           </Box>
-          <Grid item xs={12} md={4}>
+          <Box item xs={12} md={4}>
             <Card sx={{ height: '100%', textAlign: 'center' }}>
               <CardContent>
                 <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main', mb: 2 }}>

@@ -111,9 +111,9 @@ const ContactPage: React.FC = () => {
       </Box>
 
       <Container maxWidth="lg" sx={{ py: 8 }}>
-        <Grid container spacing={6}>
+        <Box container spacing={6}>
           {/* Contact Form */}
-          <Grid item xs={12} md={8}>
+          <Box item xs={12} md={8}>
             <Card>
               <CardContent sx={{ p: 4 }}>
                 <Typography variant="h3" sx={{ mb: 4, fontWeight: 600 }}>
@@ -125,7 +125,7 @@ const ContactPage: React.FC = () => {
 
                 <Box component="form" onSubmit={handleSubmit}>
                   <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
-                    <Grid item xs={12} sm={6}>
+                    <Box item xs={12} sm={6}>
                       <TextField
                         fullWidth
                         label="Your Name"
@@ -136,7 +136,7 @@ const ContactPage: React.FC = () => {
                         required
                       />
                     </Box>
-                    <Grid item xs={12} sm={6}>
+                    <Box item xs={12} sm={6}>
                       <TextField
                         fullWidth
                         label="Email"
@@ -148,7 +148,7 @@ const ContactPage: React.FC = () => {
                         required
                       />
                     </Box>
-                    <Grid item xs={12} sm={6}>
+                    <Box item xs={12} sm={6}>
                       <TextField
                         fullWidth
                         label="Phone Number"
@@ -156,7 +156,7 @@ const ContactPage: React.FC = () => {
                         onChange={(e) => handleChange('phone', e.target.value)}
                       />
                     </Box>
-                    <Grid item xs={12} sm={6}>
+                    <Box item xs={12} sm={6}>
                       <TextField
                         fullWidth
                         label="Business Name"
@@ -215,7 +215,7 @@ const ContactPage: React.FC = () => {
           </Box>
 
           {/* Contact Information */}
-          <Grid item xs={12} md={4}>
+          <Box item xs={12} md={4}>
             <Box sx={{ position: 'sticky', top: 24 }}>
               <Card>
                 <CardContent sx={{ p: 4 }}>

@@ -16,6 +16,7 @@ import {
   CheckCircle,
   Schedule,
 } from '@mui/icons-material';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 // Mock data - replace with real data from your backend
 const mockData = {
@@ -108,8 +109,8 @@ const Dashboard: React.FC = () => {
       </Typography>
       
       {/* Stats Cards */}
-      <Grid container spacing={3} sx={{ mb: 4 }}>
-        <Grid item xs={12} sm={6} md={3}>
+      <Box container spacing={3} sx={{ mb: 4 }}>
+        <Box item xs={12} sm={6} md={3}>
           <StatCard
             title="Total Leads"
             value={mockData.totalLeads}
@@ -118,7 +119,7 @@ const Dashboard: React.FC = () => {
             subtitle="+3 this week"
           />
         </Box>
-        <Grid item xs={12} sm={6} md={3}>
+        <Box item xs={12} sm={6} md={3}>
           <StatCard
             title="Active Leads"
             value={mockData.activeLeads}
@@ -127,7 +128,7 @@ const Dashboard: React.FC = () => {
             subtitle="74% of total"
           />
         </Box>
-        <Grid item xs={12} sm={6} md={3}>
+        <Box item xs={12} sm={6} md={3}>
           <StatCard
             title="Revenue Potential"
             value={`$${mockData.totalRevenue.toLocaleString()}`}
@@ -136,7 +137,7 @@ const Dashboard: React.FC = () => {
             subtitle="Monthly"
           />
         </Box>
-        <Grid item xs={12} sm={6} md={3}>
+        <Box item xs={12} sm={6} md={3}>
           <StatCard
             title="Closed Won"
             value={mockData.closedWon}
@@ -148,8 +149,8 @@ const Dashboard: React.FC = () => {
       </Box>
 
       {/* Charts Row */}
-      <Grid container spacing={3} sx={{ mb: 4 }}>
-        <Grid item xs={12} md={6}>
+      <Box container spacing={3} sx={{ mb: 4 }}>
+        <Box item xs={12} md={6}>
           <Card>
             <CardContent>
               <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
@@ -178,7 +179,7 @@ const Dashboard: React.FC = () => {
           </Card>
         </Box>
         
-        <Grid item xs={12} md={6}>
+        <Box item xs={12} md={6}>
           <Card>
             <CardContent>
               <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>

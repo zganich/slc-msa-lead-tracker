@@ -150,9 +150,9 @@ const PricingPage: React.FC = () => {
           Pricing based on delivery distance from our East Bench hub
         </Typography>
 
-        <Grid container spacing={3} sx={{ mb: 6 }}>
+        <Box container spacing={3} sx={{ mb: 6 }}>
           {zones.map((zone) => (
-            <Grid item xs={12} sm={6} md={2.4} key={zone.zone}>
+            <Box item xs={12} sm={6} md={2.4} key={zone.zone}>
               <Card
                 sx={{
                   textAlign: 'center',
@@ -224,9 +224,9 @@ const PricingPage: React.FC = () => {
         <Typography variant="h3" sx={{ textAlign: 'center', mb: 4, fontWeight: 600 }}>
           Item Size Adjustments
         </Typography>
-        <Grid container spacing={3} sx={{ mb: 8 }}>
+        <Box container spacing={3} sx={{ mb: 8 }}>
           {itemSizes.map((item) => (
-            <Grid item xs={12} sm={6} md={3} key={item.size}>
+            <Box item xs={12} sm={6} md={3} key={item.size}>
               <Card>
                 <CardContent sx={{ textAlign: 'center' }}>
                   <Typography variant="h5" sx={{ fontWeight: 600, mb: 1 }}>
@@ -256,7 +256,7 @@ const PricingPage: React.FC = () => {
 
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {packages.map((pkg) => (
-            <Grid item xs={12} md={6} lg={3} key={pkg.name}>
+            <Box item xs={12} md={6} lg={3} key={pkg.name}>
               <Card
                 sx={{
                   height: '100%',
@@ -315,7 +315,7 @@ const PricingPage: React.FC = () => {
             Additional Services
           </Typography>
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
-            <Grid item xs={12} md={6}>
+            <Box item xs={12} md={6}>
               <Card>
                 <CardContent>
                   <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
@@ -330,7 +330,7 @@ const PricingPage: React.FC = () => {
                 </CardContent>
               </Card>
             </Box>
-            <Grid item xs={12} md={6}>
+            <Box item xs={12} md={6}>
               <Card>
                 <CardContent>
                   <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>

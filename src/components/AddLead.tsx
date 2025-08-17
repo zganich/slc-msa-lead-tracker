@@ -177,7 +177,7 @@ const AddLead: React.FC = () => {
                 helperText={errors.businessName}
               />
             </Box>
-            <Grid item xs={12} md={6}>
+            <Box item xs={12} md={6}>
               <FormControl fullWidth error={!!errors.businessCategory}>
                 <InputLabel>Business Category</InputLabel>
                 <Select
@@ -193,7 +193,7 @@ const AddLead: React.FC = () => {
                 </Select>
               </FormControl>
             </Box>
-            <Grid item xs={12} md={6}>
+            <Box item xs={12} md={6}>
               <FormControl fullWidth error={!!errors.neighborhood}>
                 <InputLabel>Neighborhood</InputLabel>
                 <Select
@@ -225,7 +225,7 @@ const AddLead: React.FC = () => {
       case 1:
         return (
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
-            <Grid item xs={12} md={6}>
+            <Box item xs={12} md={6}>
               <TextField
                 fullWidth
                 label="Contact Person"
@@ -235,7 +235,7 @@ const AddLead: React.FC = () => {
                 helperText={errors.contactPerson}
               />
             </Box>
-            <Grid item xs={12} md={6}>
+            <Box item xs={12} md={6}>
               <TextField
                 fullWidth
                 label="Phone Number"
@@ -262,7 +262,7 @@ const AddLead: React.FC = () => {
       case 2:
         return (
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
-            <Grid item xs={12} md={6}>
+            <Box item xs={12} md={6}>
               <TextField
                 fullWidth
                 label="Estimated Monthly Deliveries"
@@ -273,7 +273,7 @@ const AddLead: React.FC = () => {
                 helperText={errors.estimatedMonthlyDeliveries}
               />
             </Box>
-            <Grid item xs={12} md={6}>
+            <Box item xs={12} md={6}>
               <FormControl fullWidth error={!!errors.zone}>
                 <InputLabel>Zone</InputLabel>
                 <Select
@@ -311,7 +311,7 @@ const AddLead: React.FC = () => {
             </Alert>
             
             <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
-              <Grid item xs={12} md={6}>
+              <Box item xs={12} md={6}>
                 <Typography variant="h6" sx={{ mb: 2 }}>Business Information</Typography>
                 <Typography><strong>Name:</strong> {formData.businessName}</Typography>
                 <Typography><strong>Category:</strong> {formData.businessCategory}</Typography>
@@ -319,7 +319,7 @@ const AddLead: React.FC = () => {
                 <Typography><strong>Address:</strong> {formData.address}</Typography>
               </Box>
               
-              <Grid item xs={12} md={6}>
+              <Box item xs={12} md={6}>
                 <Typography variant="h6" sx={{ mb: 2 }}>Contact Information</Typography>
                 <Typography><strong>Contact:</strong> {formData.contactPerson}</Typography>
                 <Typography><strong>Phone:</strong> {formData.phone}</Typography>
