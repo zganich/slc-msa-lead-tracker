@@ -4,7 +4,6 @@ import {
   Container,
   Typography,
   Button,
-  Grid,
   Card,
   CardContent,
   List,
@@ -142,7 +141,7 @@ const ContractorPage: React.FC = () => {
         <Typography variant="h2" sx={{ textAlign: 'center', mb: 6, fontWeight: 600 }}>
           Why Contractors Choose East Bench Delivery
         </Typography>
-        <Grid container spacing={4}>
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {benefits.map((benefit, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
               <Card sx={{ height: '100%', textAlign: 'center' }}>
@@ -166,9 +165,9 @@ const ContractorPage: React.FC = () => {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
       </Container>
 
       {/* Common Deliveries */}
@@ -180,16 +179,16 @@ const ContractorPage: React.FC = () => {
           <Typography variant="h6" sx={{ textAlign: 'center', mb: 6, color: 'text.secondary' }}>
             From small hardware to large equipment, we handle it all
           </Typography>
-          <Grid container spacing={2}>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
             {commonDeliveries.map((item, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
                 <Box sx={{ display: 'flex', alignItems: 'center', p: 2 }}>
                   <CheckCircle sx={{ color: 'success.main', mr: 2 }} />
                   <Typography variant="body1">{item}</Typography>
                 </Box>
-              </Grid>
+              </Box>
             ))}
-          </Grid>
+          </Box>
         </Container>
       </Box>
 
@@ -255,7 +254,7 @@ const ContractorPage: React.FC = () => {
                 Get Contractor Pack
               </Button>
             </Card>
-          </Grid>
+          </Box>
           <Grid item xs={12} md={6}>
             <Typography variant="h4" sx={{ mb: 3, fontWeight: 600 }}>
               Perfect for:
@@ -298,8 +297,8 @@ const ContractorPage: React.FC = () => {
                 />
               </ListItem>
             </List>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
 
       {/* Testimonials */}
@@ -308,7 +307,7 @@ const ContractorPage: React.FC = () => {
           <Typography variant="h2" sx={{ textAlign: 'center', mb: 6, fontWeight: 600 }}>
             What Contractors Say
           </Typography>
-          <Grid container spacing={4}>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
             {testimonials.map((testimonial, index) => (
               <Grid item xs={12} md={6} key={index}>
                 <Card>
@@ -331,9 +330,9 @@ const ContractorPage: React.FC = () => {
                     </Box>
                   </CardContent>
                 </Card>
-              </Grid>
+              </Box>
             ))}
-          </Grid>
+          </Box>
         </Container>
       </Box>
 

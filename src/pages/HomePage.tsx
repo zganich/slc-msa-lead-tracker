@@ -4,7 +4,6 @@ import {
   Container,
   Typography,
   Button,
-  Grid,
   Card,
   CardContent,
   CardMedia,
@@ -129,7 +128,7 @@ const HomePage: React.FC = () => {
         <Typography variant="h2" sx={{ textAlign: 'center', mb: 6, fontWeight: 600 }}>
           Why Choose East Bench Delivery?
         </Typography>
-        <Grid container spacing={4}>
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {features.map((feature, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
               <Card sx={{ height: '100%', textAlign: 'center' }}>
@@ -153,9 +152,9 @@ const HomePage: React.FC = () => {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
       </Container>
 
       {/* Customer Types Section */}
@@ -164,7 +163,7 @@ const HomePage: React.FC = () => {
           <Typography variant="h2" sx={{ textAlign: 'center', mb: 6, fontWeight: 600 }}>
             Solutions for Every Business
           </Typography>
-          <Grid container spacing={4}>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
             {customerTypes.map((customer, index) => (
               <Grid item xs={12} md={4} key={index}>
                 <Card 
@@ -207,9 +206,9 @@ const HomePage: React.FC = () => {
                     </Button>
                   </CardContent>
                 </Card>
-              </Grid>
+              </Box>
             ))}
-          </Grid>
+          </Box>
         </Container>
       </Box>
 

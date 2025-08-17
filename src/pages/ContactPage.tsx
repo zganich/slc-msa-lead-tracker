@@ -4,7 +4,6 @@ import {
   Container,
   Typography,
   Button,
-  Grid,
   Card,
   CardContent,
   TextField,
@@ -125,7 +124,7 @@ const ContactPage: React.FC = () => {
                 </Typography>
 
                 <Box component="form" onSubmit={handleSubmit}>
-                  <Grid container spacing={3}>
+                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
                     <Grid item xs={12} sm={6}>
                       <TextField
                         fullWidth
@@ -136,7 +135,7 @@ const ContactPage: React.FC = () => {
                         helperText={errors.name}
                         required
                       />
-                    </Grid>
+                    </Box>
                     <Grid item xs={12} sm={6}>
                       <TextField
                         fullWidth
@@ -148,7 +147,7 @@ const ContactPage: React.FC = () => {
                         helperText={errors.email}
                         required
                       />
-                    </Grid>
+                    </Box>
                     <Grid item xs={12} sm={6}>
                       <TextField
                         fullWidth
@@ -156,7 +155,7 @@ const ContactPage: React.FC = () => {
                         value={formData.phone}
                         onChange={(e) => handleChange('phone', e.target.value)}
                       />
-                    </Grid>
+                    </Box>
                     <Grid item xs={12} sm={6}>
                       <TextField
                         fullWidth
@@ -167,8 +166,8 @@ const ContactPage: React.FC = () => {
                         helperText={errors.businessName}
                         required
                       />
-                    </Grid>
-                    <Grid item xs={12}>
+                    </Box>
+                    <Box sx={{ width: "100%" }}>
                       <FormControl fullWidth>
                         <InputLabel>Business Type</InputLabel>
                         <Select
@@ -183,8 +182,8 @@ const ContactPage: React.FC = () => {
                           ))}
                         </Select>
                       </FormControl>
-                    </Grid>
-                    <Grid item xs={12}>
+                    </Box>
+                    <Box sx={{ width: "100%" }}>
                       <TextField
                         fullWidth
                         label="Message"
@@ -197,8 +196,8 @@ const ContactPage: React.FC = () => {
                         placeholder="Tell us about your delivery needs, estimated volume, and any questions you have..."
                         required
                       />
-                    </Grid>
-                    <Grid item xs={12}>
+                    </Box>
+                    <Box sx={{ width: "100%" }}>
                       <Button
                         type="submit"
                         variant="contained"
@@ -208,12 +207,12 @@ const ContactPage: React.FC = () => {
                       >
                         Send Message
                       </Button>
-                    </Grid>
-                  </Grid>
+                    </Box>
+                  </Box>
                 </Box>
               </CardContent>
             </Card>
-          </Grid>
+          </Box>
 
           {/* Contact Information */}
           <Grid item xs={12} md={4}>
@@ -280,8 +279,8 @@ const ContactPage: React.FC = () => {
                 </CardContent>
               </Card>
             </Box>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
     </Box>
   );

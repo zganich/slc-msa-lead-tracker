@@ -6,7 +6,6 @@ import {
   Typography,
   TextField,
   Button,
-  Grid,
   FormControl,
   InputLabel,
   Select,
@@ -167,8 +166,8 @@ const AddLead: React.FC = () => {
     switch (step) {
       case 0:
         return (
-          <Grid container spacing={3}>
-            <Grid item xs={12}>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
+            <Box sx={{ width: "100%" }}>
               <TextField
                 fullWidth
                 label="Business Name"
@@ -177,7 +176,7 @@ const AddLead: React.FC = () => {
                 error={!!errors.businessName}
                 helperText={errors.businessName}
               />
-            </Grid>
+            </Box>
             <Grid item xs={12} md={6}>
               <FormControl fullWidth error={!!errors.businessCategory}>
                 <InputLabel>Business Category</InputLabel>
@@ -193,7 +192,7 @@ const AddLead: React.FC = () => {
                   ))}
                 </Select>
               </FormControl>
-            </Grid>
+            </Box>
             <Grid item xs={12} md={6}>
               <FormControl fullWidth error={!!errors.neighborhood}>
                 <InputLabel>Neighborhood</InputLabel>
@@ -209,8 +208,8 @@ const AddLead: React.FC = () => {
                   ))}
                 </Select>
               </FormControl>
-            </Grid>
-            <Grid item xs={12}>
+            </Box>
+            <Box sx={{ width: "100%" }}>
               <TextField
                 fullWidth
                 label="Address"
@@ -219,13 +218,13 @@ const AddLead: React.FC = () => {
                 multiline
                 rows={2}
               />
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         );
 
       case 1:
         return (
-          <Grid container spacing={3}>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
             <Grid item xs={12} md={6}>
               <TextField
                 fullWidth
@@ -235,7 +234,7 @@ const AddLead: React.FC = () => {
                 error={!!errors.contactPerson}
                 helperText={errors.contactPerson}
               />
-            </Grid>
+            </Box>
             <Grid item xs={12} md={6}>
               <TextField
                 fullWidth
@@ -245,8 +244,8 @@ const AddLead: React.FC = () => {
                 error={!!errors.phone}
                 helperText={errors.phone}
               />
-            </Grid>
-            <Grid item xs={12}>
+            </Box>
+            <Box sx={{ width: "100%" }}>
               <TextField
                 fullWidth
                 label="Email"
@@ -256,13 +255,13 @@ const AddLead: React.FC = () => {
                 error={!!errors.email}
                 helperText={errors.email}
               />
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         );
 
       case 2:
         return (
-          <Grid container spacing={3}>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
             <Grid item xs={12} md={6}>
               <TextField
                 fullWidth
@@ -273,7 +272,7 @@ const AddLead: React.FC = () => {
                 error={!!errors.estimatedMonthlyDeliveries}
                 helperText={errors.estimatedMonthlyDeliveries}
               />
-            </Grid>
+            </Box>
             <Grid item xs={12} md={6}>
               <FormControl fullWidth error={!!errors.zone}>
                 <InputLabel>Zone</InputLabel>
@@ -289,8 +288,8 @@ const AddLead: React.FC = () => {
                   <MenuItem value={5}>Zone 5 (30+ miles)</MenuItem>
                 </Select>
               </FormControl>
-            </Grid>
-            <Grid item xs={12}>
+            </Box>
+            <Box sx={{ width: "100%" }}>
               <TextField
                 fullWidth
                 label="Notes"
@@ -300,8 +299,8 @@ const AddLead: React.FC = () => {
                 rows={3}
                 placeholder="Any additional notes about this lead..."
               />
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         );
 
       case 3:
@@ -311,23 +310,23 @@ const AddLead: React.FC = () => {
               Review the information below before saving the lead.
             </Alert>
             
-            <Grid container spacing={3}>
+            <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
               <Grid item xs={12} md={6}>
                 <Typography variant="h6" sx={{ mb: 2 }}>Business Information</Typography>
                 <Typography><strong>Name:</strong> {formData.businessName}</Typography>
                 <Typography><strong>Category:</strong> {formData.businessCategory}</Typography>
                 <Typography><strong>Neighborhood:</strong> {formData.neighborhood}</Typography>
                 <Typography><strong>Address:</strong> {formData.address}</Typography>
-              </Grid>
+              </Box>
               
               <Grid item xs={12} md={6}>
                 <Typography variant="h6" sx={{ mb: 2 }}>Contact Information</Typography>
                 <Typography><strong>Contact:</strong> {formData.contactPerson}</Typography>
                 <Typography><strong>Phone:</strong> {formData.phone}</Typography>
                 <Typography><strong>Email:</strong> {formData.email}</Typography>
-              </Grid>
+              </Box>
               
-              <Grid item xs={12}>
+              <Box sx={{ width: "100%" }}>
                 <Typography variant="h6" sx={{ mb: 2 }}>Lead Analysis</Typography>
                 <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
                   <Chip
@@ -346,8 +345,8 @@ const AddLead: React.FC = () => {
                     variant="outlined"
                   />
                 </Box>
-              </Grid>
-            </Grid>
+              </Box>
+            </Box>
           </Box>
         );
 

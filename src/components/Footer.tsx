@@ -3,7 +3,6 @@ import {
   Box,
   Container,
   Typography,
-  Grid,
   Link,
   IconButton,
 } from '@mui/material';
@@ -25,7 +24,7 @@ const Footer: React.FC = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={4}>
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           <Grid item xs={12} md={4}>
             <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
               <LocalShipping sx={{ mr: 1, color: 'primary.main' }} />
@@ -40,7 +39,7 @@ const Footer: React.FC = () => {
             <Typography variant="body2" sx={{ opacity: 0.6 }}>
               © 2024 East Bench Delivery. All rights reserved.
             </Typography>
-          </Grid>
+          </Box>
           
           <Grid item xs={12} md={4}>
             <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>
@@ -66,7 +65,7 @@ const Footer: React.FC = () => {
                 Contact
               </Link>
             </Box>
-          </Grid>
+          </Box>
           
           <Grid item xs={12} md={4}>
             <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>
@@ -93,8 +92,8 @@ const Footer: React.FC = () => {
                 </Typography>
               </Box>
             </Box>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
         
         <Box sx={{ borderTop: '1px solid rgba(255,255,255,0.1)', mt: 4, pt: 4, textAlign: 'center' }}>
           <Typography variant="body2" sx={{ opacity: 0.6 }}>

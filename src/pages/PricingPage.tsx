@@ -4,7 +4,6 @@ import {
   Container,
   Typography,
   Button,
-  Grid,
   Card,
   CardContent,
   Chip,
@@ -173,9 +172,9 @@ const PricingPage: React.FC = () => {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
 
         {/* Pricing Table */}
         <Paper sx={{ mb: 8 }}>
@@ -243,9 +242,9 @@ const PricingPage: React.FC = () => {
                   />
                 </CardContent>
               </Card>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
 
         {/* Bulk Packages */}
         <Typography variant="h2" sx={{ textAlign: 'center', mb: 6, fontWeight: 600 }}>
@@ -255,7 +254,7 @@ const PricingPage: React.FC = () => {
           Save money with prepaid delivery credits
         </Typography>
 
-        <Grid container spacing={4}>
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {packages.map((pkg) => (
             <Grid item xs={12} md={6} lg={3} key={pkg.name}>
               <Card
@@ -306,16 +305,16 @@ const PricingPage: React.FC = () => {
                   </Button>
                 </CardContent>
               </Card>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
 
         {/* Additional Services */}
         <Box sx={{ mt: 8 }}>
           <Typography variant="h3" sx={{ textAlign: 'center', mb: 4, fontWeight: 600 }}>
             Additional Services
           </Typography>
-          <Grid container spacing={4}>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
             <Grid item xs={12} md={6}>
               <Card>
                 <CardContent>
@@ -330,7 +329,7 @@ const PricingPage: React.FC = () => {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid>
+            </Box>
             <Grid item xs={12} md={6}>
               <Card>
                 <CardContent>
@@ -345,8 +344,8 @@ const PricingPage: React.FC = () => {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         </Box>
 
         {/* CTA */}

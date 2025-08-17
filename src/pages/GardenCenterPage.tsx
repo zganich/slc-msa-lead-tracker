@@ -4,7 +4,6 @@ import {
   Container,
   Typography,
   Button,
-  Grid,
   Card,
   CardContent,
   List,
@@ -123,7 +122,7 @@ const GardenCenterPage: React.FC = () => {
         <Typography variant="h2" sx={{ textAlign: 'center', mb: 6, fontWeight: 600 }}>
           Why Garden Centers Choose East Bench Delivery
         </Typography>
-        <Grid container spacing={4}>
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {benefits.map((benefit, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
               <Card sx={{ height: '100%', textAlign: 'center' }}>
@@ -152,9 +151,9 @@ const GardenCenterPage: React.FC = () => {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
       </Container>
 
       {/* Services Section */}
@@ -166,16 +165,16 @@ const GardenCenterPage: React.FC = () => {
           <Typography variant="h6" sx={{ textAlign: 'center', mb: 6, color: 'text.secondary' }}>
             Specialized handling for all your garden products
           </Typography>
-          <Grid container spacing={2}>
+          <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
             {services.map((service, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
                 <Box sx={{ display: 'flex', alignItems: 'center', p: 2 }}>
                   <CheckCircle sx={{ color: 'success.main', mr: 2 }} />
                   <Typography variant="body1">{service}</Typography>
                 </Box>
-              </Grid>
+              </Box>
             ))}
-          </Grid>
+          </Box>
         </Container>
       </Box>
 
@@ -184,7 +183,7 @@ const GardenCenterPage: React.FC = () => {
         <Typography variant="h2" sx={{ textAlign: 'center', mb: 6, fontWeight: 600 }}>
           Specialized Plant Handling
         </Typography>
-        <Grid container spacing={4}>
+        <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           <Grid item xs={12} md={6}>
             <Card>
               <CardContent>
@@ -219,7 +218,7 @@ const GardenCenterPage: React.FC = () => {
                 </List>
               </CardContent>
             </Card>
-          </Grid>
+          </Box>
           <Grid item xs={12} md={6}>
             <Card>
               <CardContent>
@@ -254,8 +253,8 @@ const GardenCenterPage: React.FC = () => {
                 </List>
               </CardContent>
             </Card>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
       </Container>
 
       {/* CTA Section */}

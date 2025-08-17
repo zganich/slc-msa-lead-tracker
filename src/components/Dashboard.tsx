@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Grid,
   Card,
   CardContent,
   Typography,
@@ -17,7 +16,6 @@ import {
   CheckCircle,
   Schedule,
 } from '@mui/icons-material';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 // Mock data - replace with real data from your backend
 const mockData = {
@@ -119,7 +117,7 @@ const Dashboard: React.FC = () => {
             color="#1976d2"
             subtitle="+3 this week"
           />
-        </Grid>
+        </Box>
         <Grid item xs={12} sm={6} md={3}>
           <StatCard
             title="Active Leads"
@@ -128,7 +126,7 @@ const Dashboard: React.FC = () => {
             color="#2e7d32"
             subtitle="74% of total"
           />
-        </Grid>
+        </Box>
         <Grid item xs={12} sm={6} md={3}>
           <StatCard
             title="Revenue Potential"
@@ -137,7 +135,7 @@ const Dashboard: React.FC = () => {
             color="#ed6c02"
             subtitle="Monthly"
           />
-        </Grid>
+        </Box>
         <Grid item xs={12} sm={6} md={3}>
           <StatCard
             title="Closed Won"
@@ -146,8 +144,8 @@ const Dashboard: React.FC = () => {
             color="#9c27b0"
             subtitle="This month"
           />
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
 
       {/* Charts Row */}
       <Grid container spacing={3} sx={{ mb: 4 }}>
@@ -178,7 +176,7 @@ const Dashboard: React.FC = () => {
               </ResponsiveContainer>
             </CardContent>
           </Card>
-        </Grid>
+        </Box>
         
         <Grid item xs={12} md={6}>
           <Card>
@@ -197,8 +195,8 @@ const Dashboard: React.FC = () => {
               </ResponsiveContainer>
             </CardContent>
           </Card>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
 
       {/* Recent Leads */}
       <Card>

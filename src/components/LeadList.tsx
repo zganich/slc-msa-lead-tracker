@@ -15,7 +15,6 @@ import {
   FormControl,
   InputLabel,
   Select,
-  Grid,
 } from '@mui/material';
 import {
   Search as SearchIcon,
@@ -195,7 +194,7 @@ const LeadList: React.FC = () => {
                   ),
                 }}
               />
-            </Grid>
+            </Box>
             <Grid item xs={12} md={3}>
               <FormControl fullWidth>
                 <InputLabel>Neighborhood</InputLabel>
@@ -211,7 +210,7 @@ const LeadList: React.FC = () => {
                   ))}
                 </Select>
               </FormControl>
-            </Grid>
+            </Box>
             <Grid item xs={12} md={3}>
               <FormControl fullWidth>
                 <InputLabel>Status</InputLabel>
@@ -227,18 +226,18 @@ const LeadList: React.FC = () => {
                   ))}
                 </Select>
               </FormControl>
-            </Grid>
+            </Box>
             <Grid item xs={12} md={2}>
               <Typography variant="body2" color="text.secondary">
                 {filteredLeads.length} leads
               </Typography>
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         </CardContent>
       </Card>
 
       {/* Leads List */}
-      <Grid container spacing={2}>
+      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
         {filteredLeads.map((lead) => (
           <Grid item xs={12} key={lead.id}>
             <Card sx={{ '&:hover': { boxShadow: 4 } }}>
@@ -296,9 +295,9 @@ const LeadList: React.FC = () => {
                 </Box>
               </CardContent>
             </Card>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
 
       {/* Action Menu */}
       <Menu

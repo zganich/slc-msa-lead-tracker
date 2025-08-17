@@ -6,7 +6,6 @@ import {
   Typography,
   Button,
   Chip,
-  Grid,
   Avatar,
   Divider,
   TextField,
@@ -145,7 +144,7 @@ const LeadDetail: React.FC = () => {
         </Box>
       </Box>
 
-      <Grid container spacing={3}>
+      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
         {/* Main Lead Information */}
         <Grid item xs={12} md={8}>
           <Card sx={{ mb: 3 }}>
@@ -178,7 +177,7 @@ const LeadDetail: React.FC = () => {
                 </Box>
               </Box>
 
-              <Grid container spacing={3}>
+              <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
                 <Grid item xs={12} md={6}>
                   <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
                     Contact Information
@@ -199,7 +198,7 @@ const LeadDetail: React.FC = () => {
                     <LocationIcon sx={{ mr: 1, color: 'text.secondary' }} />
                     <Typography>{editedLead.address}</Typography>
                   </Box>
-                </Grid>
+                </Box>
 
                 <Grid item xs={12} md={6}>
                   <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
@@ -217,8 +216,8 @@ const LeadDetail: React.FC = () => {
                     <ScheduleIcon sx={{ mr: 1, color: 'text.secondary' }} />
                     <Typography>Zone {editedLead.zone}</Typography>
                   </Box>
-                </Grid>
-              </Grid>
+                </Box>
+              </Box>
             </CardContent>
           </Card>
 
@@ -256,7 +255,7 @@ const LeadDetail: React.FC = () => {
               </Box>
             </CardContent>
           </Card>
-        </Grid>
+        </Box>
 
         {/* Sidebar */}
         <Grid item xs={12} md={4}>
@@ -361,8 +360,8 @@ const LeadDetail: React.FC = () => {
               </Timeline>
             </CardContent>
           </Card>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 };
