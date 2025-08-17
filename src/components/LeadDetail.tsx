@@ -146,7 +146,7 @@ const LeadDetail: React.FC = () => {
 
       <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
         {/* Main Lead Information */}
-        <Box item xs={12} md={8}>
+        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
           <Card sx={{ mb: 3 }}>
             <CardContent>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
@@ -178,7 +178,7 @@ const LeadDetail: React.FC = () => {
               </Box>
 
               <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
-                <Box item xs={12} md={6}>
+                <Box sx={{ width: { xs: "100%", md: "50%" } }}>
                   <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
                     Contact Information
                   </Typography>
@@ -200,7 +200,7 @@ const LeadDetail: React.FC = () => {
                   </Box>
                 </Box>
 
-                <Box item xs={12} md={6}>
+                <Box sx={{ width: { xs: "100%", md: "50%" } }}>
                   <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
                     Business Details
                   </Typography>
@@ -258,7 +258,7 @@ const LeadDetail: React.FC = () => {
         </Box>
 
         {/* Sidebar */}
-        <Box item xs={12} md={4}>
+        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
           {/* Lead Score & Revenue */}
           <Card sx={{ mb: 3 }}>
             <CardContent>

@@ -110,7 +110,7 @@ const Dashboard: React.FC = () => {
       
       {/* Stats Cards */}
       <Box container spacing={3} sx={{ mb: 4 }}>
-        <Box item xs={12} sm={6} md={3}>
+        <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }}>
           <StatCard
             title="Total Leads"
             value={mockData.totalLeads}
@@ -119,7 +119,7 @@ const Dashboard: React.FC = () => {
             subtitle="+3 this week"
           />
         </Box>
-        <Box item xs={12} sm={6} md={3}>
+        <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }}>
           <StatCard
             title="Active Leads"
             value={mockData.activeLeads}
@@ -128,7 +128,7 @@ const Dashboard: React.FC = () => {
             subtitle="74% of total"
           />
         </Box>
-        <Box item xs={12} sm={6} md={3}>
+        <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }}>
           <StatCard
             title="Revenue Potential"
             value={`$${mockData.totalRevenue.toLocaleString()}`}
@@ -137,7 +137,7 @@ const Dashboard: React.FC = () => {
             subtitle="Monthly"
           />
         </Box>
-        <Box item xs={12} sm={6} md={3}>
+        <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }}>
           <StatCard
             title="Closed Won"
             value={mockData.closedWon}
@@ -150,7 +150,7 @@ const Dashboard: React.FC = () => {
 
       {/* Charts Row */}
       <Box container spacing={3} sx={{ mb: 4 }}>
-        <Box item xs={12} md={6}>
+        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
           <Card>
             <CardContent>
               <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>
@@ -179,7 +179,7 @@ const Dashboard: React.FC = () => {
           </Card>
         </Box>
         
-        <Box item xs={12} md={6}>
+        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
           <Card>
             <CardContent>
               <Typography variant="h6" sx={{ mb: 2, fontWeight: 600 }}>

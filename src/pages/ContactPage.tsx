@@ -113,7 +113,7 @@ const ContactPage: React.FC = () => {
       <Container maxWidth="lg" sx={{ py: 8 }}>
         <Box container spacing={6}>
           {/* Contact Form */}
-          <Box item xs={12} md={8}>
+          <Box sx={{ width: { xs: "100%", md: "50%" } }}>
             <Card>
               <CardContent sx={{ p: 4 }}>
                 <Typography variant="h3" sx={{ mb: 4, fontWeight: 600 }}>
@@ -125,7 +125,7 @@ const ContactPage: React.FC = () => {
 
                 <Box component="form" onSubmit={handleSubmit}>
                   <Box sx={{ display: "flex", flexWrap: "wrap", gap: 3 }}>
-                    <Box item xs={12} sm={6}>
+                    <Box sx={{ width: { xs: "100%", sm: "50%" } }}>
                       <TextField
                         fullWidth
                         label="Your Name"
@@ -136,7 +136,7 @@ const ContactPage: React.FC = () => {
                         required
                       />
                     </Box>
-                    <Box item xs={12} sm={6}>
+                    <Box sx={{ width: { xs: "100%", sm: "50%" } }}>
                       <TextField
                         fullWidth
                         label="Email"
@@ -148,7 +148,7 @@ const ContactPage: React.FC = () => {
                         required
                       />
                     </Box>
-                    <Box item xs={12} sm={6}>
+                    <Box sx={{ width: { xs: "100%", sm: "50%" } }}>
                       <TextField
                         fullWidth
                         label="Phone Number"
@@ -156,7 +156,7 @@ const ContactPage: React.FC = () => {
                         onChange={(e) => handleChange('phone', e.target.value)}
                       />
                     </Box>
-                    <Box item xs={12} sm={6}>
+                    <Box sx={{ width: { xs: "100%", sm: "50%" } }}>
                       <TextField
                         fullWidth
                         label="Business Name"
@@ -215,7 +215,7 @@ const ContactPage: React.FC = () => {
           </Box>
 
           {/* Contact Information */}
-          <Box item xs={12} md={4}>
+          <Box sx={{ width: { xs: "100%", md: "50%" } }}>
             <Box sx={{ position: 'sticky', top: 24 }}>
               <Card>
                 <CardContent sx={{ p: 4 }}>

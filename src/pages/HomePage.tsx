@@ -130,7 +130,7 @@ const HomePage: React.FC = () => {
         </Typography>
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {features.map((feature, index) => (
-            <Box item xs={12} sm={6} md={3} key={index}>
+            <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }} key={index}>
               <Card sx={{ height: '100%', textAlign: 'center' }}>
                 <CardContent>
                   <Avatar
@@ -165,7 +165,7 @@ const HomePage: React.FC = () => {
           </Typography>
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
             {customerTypes.map((customer, index) => (
-              <Box item xs={12} md={4} key={index}>
+              <Box sx={{ width: { xs: "100%", md: "50%" } }} key={index}>
                 <Card 
                   sx={{ 
                     height: '100%', 

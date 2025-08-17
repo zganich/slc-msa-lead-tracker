@@ -143,7 +143,7 @@ const ContractorPage: React.FC = () => {
         </Typography>
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {benefits.map((benefit, index) => (
-            <Box item xs={12} sm={6} md={3} key={index}>
+            <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }} key={index}>
               <Card sx={{ height: '100%', textAlign: 'center' }}>
                 <CardContent>
                   <Avatar
@@ -181,7 +181,7 @@ const ContractorPage: React.FC = () => {
           </Typography>
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
             {commonDeliveries.map((item, index) => (
-              <Box item xs={12} sm={6} md={4} key={index}>
+              <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }} key={index}>
                 <Box sx={{ display: 'flex', alignItems: 'center', p: 2 }}>
                   <CheckCircle sx={{ color: 'success.main', mr: 2 }} />
                   <Typography variant="body1">{item}</Typography>
@@ -198,7 +198,7 @@ const ContractorPage: React.FC = () => {
           Contractor Pack - Most Popular
         </Typography>
         <Box container spacing={4} alignItems="center">
-          <Box item xs={12} md={6}>
+          <Box sx={{ width: { xs: "100%", md: "50%" } }}>
             <Card sx={{ p: 4 }}>
               <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main', mb: 2 }}>
                 $500
@@ -255,7 +255,7 @@ const ContractorPage: React.FC = () => {
               </Button>
             </Card>
           </Box>
-          <Box item xs={12} md={6}>
+          <Box sx={{ width: { xs: "100%", md: "50%" } }}>
             <Typography variant="h4" sx={{ mb: 3, fontWeight: 600 }}>
               Perfect for:
             </Typography>
@@ -309,7 +309,7 @@ const ContractorPage: React.FC = () => {
           </Typography>
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
             {testimonials.map((testimonial, index) => (
-              <Box item xs={12} md={6} key={index}>
+              <Box sx={{ width: { xs: "100%", md: "50%" } }} key={index}>
                 <Card>
                   <CardContent>
                     <Typography variant="body1" sx={{ mb: 3, fontStyle: 'italic' }}>

@@ -180,7 +180,7 @@ const LeadList: React.FC = () => {
       <Card sx={{ mb: 3 }}>
         <CardContent>
           <Box container spacing={2} alignItems="center">
-            <Box item xs={12} md={4}>
+            <Box sx={{ width: { xs: "100%", md: "50%" } }}>
               <TextField
                 fullWidth
                 placeholder="Search leads..."
@@ -195,7 +195,7 @@ const LeadList: React.FC = () => {
                 }}
               />
             </Box>
-            <Box item xs={12} md={3}>
+            <Box sx={{ width: { xs: "100%", md: "50%" } }}>
               <FormControl fullWidth>
                 <InputLabel>Neighborhood</InputLabel>
                 <Select
@@ -211,7 +211,7 @@ const LeadList: React.FC = () => {
                 </Select>
               </FormControl>
             </Box>
-            <Box item xs={12} md={3}>
+            <Box sx={{ width: { xs: "100%", md: "50%" } }}>
               <FormControl fullWidth>
                 <InputLabel>Status</InputLabel>
                 <Select
@@ -227,7 +227,7 @@ const LeadList: React.FC = () => {
                 </Select>
               </FormControl>
             </Box>
-            <Box item xs={12} md={2}>
+            <Box sx={{ width: { xs: "100%", md: "50%" } }}>
               <Typography variant="body2" color="text.secondary">
                 {filteredLeads.length} leads
               </Typography>
@@ -239,7 +239,7 @@ const LeadList: React.FC = () => {
       {/* Leads List */}
       <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
         {filteredLeads.map((lead) => (
-          <Box item xs={12} key={lead.id}>
+          <Box sx={{ width: "100%" }} key={lead.id}>
             <Card sx={{ '&:hover': { boxShadow: 4 } }}>
               <CardContent>
                 <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>

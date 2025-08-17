@@ -152,7 +152,7 @@ const PricingPage: React.FC = () => {
 
         <Box container spacing={3} sx={{ mb: 6 }}>
           {zones.map((zone) => (
-            <Box item xs={12} sm={6} md={2.4} key={zone.zone}>
+            <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }} key={zone.zone}>
               <Card
                 sx={{
                   textAlign: 'center',
@@ -226,7 +226,7 @@ const PricingPage: React.FC = () => {
         </Typography>
         <Box container spacing={3} sx={{ mb: 8 }}>
           {itemSizes.map((item) => (
-            <Box item xs={12} sm={6} md={3} key={item.size}>
+            <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }} key={item.size}>
               <Card>
                 <CardContent sx={{ textAlign: 'center' }}>
                   <Typography variant="h5" sx={{ fontWeight: 600, mb: 1 }}>
@@ -256,7 +256,7 @@ const PricingPage: React.FC = () => {
 
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {packages.map((pkg) => (
-            <Box item xs={12} md={6} lg={3} key={pkg.name}>
+            <Box sx={{ width: { xs: "100%", md: "50%" } }} lg={3} key={pkg.name}>
               <Card
                 sx={{
                   height: '100%',
@@ -315,7 +315,7 @@ const PricingPage: React.FC = () => {
             Additional Services
           </Typography>
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
-            <Box item xs={12} md={6}>
+            <Box sx={{ width: { xs: "100%", md: "50%" } }}>
               <Card>
                 <CardContent>
                   <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>
@@ -330,7 +330,7 @@ const PricingPage: React.FC = () => {
                 </CardContent>
               </Card>
             </Box>
-            <Box item xs={12} md={6}>
+            <Box sx={{ width: { xs: "100%", md: "50%" } }}>
               <Card>
                 <CardContent>
                   <Typography variant="h5" sx={{ fontWeight: 600, mb: 2 }}>

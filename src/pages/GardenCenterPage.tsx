@@ -124,7 +124,7 @@ const GardenCenterPage: React.FC = () => {
         </Typography>
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
           {benefits.map((benefit, index) => (
-            <Box item xs={12} sm={6} md={3} key={index}>
+            <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }} key={index}>
               <Card sx={{ height: '100%', textAlign: 'center' }}>
                 <CardContent>
                   <Box
@@ -167,7 +167,7 @@ const GardenCenterPage: React.FC = () => {
           </Typography>
           <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
             {services.map((service, index) => (
-              <Box item xs={12} sm={6} md={4} key={index}>
+              <Box sx={{ width: { xs: "100%", sm: "50%", md: "33.33%" } }} key={index}>
                 <Box sx={{ display: 'flex', alignItems: 'center', p: 2 }}>
                   <CheckCircle sx={{ color: 'success.main', mr: 2 }} />
                   <Typography variant="body1">{service}</Typography>
@@ -184,7 +184,7 @@ const GardenCenterPage: React.FC = () => {
           Specialized Plant Handling
         </Typography>
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 4 }}>
-          <Box item xs={12} md={6}>
+          <Box sx={{ width: { xs: "100%", md: "50%" } }}>
             <Card>
               <CardContent>
                 <Typography variant="h5" sx={{ mb: 3, fontWeight: 600 }}>
@@ -219,7 +219,7 @@ const GardenCenterPage: React.FC = () => {
               </CardContent>
             </Card>
           </Box>
-          <Box item xs={12} md={6}>
+          <Box sx={{ width: { xs: "100%", md: "50%" } }}>
             <Card>
               <CardContent>
                 <Typography variant="h5" sx={{ mb: 3, fontWeight: 600 }}>
